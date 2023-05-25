@@ -1,0 +1,271 @@
+.page-home-container {
+    .page-home {
+
+
+        .hero {
+
+            position: relative;
+            height: 75vh;
+
+            .home-featured {
+
+                margin-top: -100px;
+                height: auto;
+                height: auto !important;
+            }
+
+            .gradient {
+                position: absolute;
+                bottom: 0;
+                background: linear-gradient(0deg, #0E1647 24.48%, rgba(65, 27, 79, 0) 100%);
+                height: 130px;
+                position: absolute;
+                bottom: 0;
+                z-index: 3;
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main-details {
+    h1 {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 61px;
+        margin-top: -80px;
+        letter-spacing: 0.015em;
+        color: #FFFFFF;
+        position: relative;
+        z-index: 3;
+        text-transform: uppercase;
+    }
+
+    .status {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            li {
+                list-style: none;
+                margin-right: 20px;
+
+                a {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 16px;
+                    line-height: 21px;
+                    letter-spacing: 0.015em;
+                    color: rgba(101, 101, 101, 0.73);
+                    pointer-events: none;
+                    text-transform: uppercase;
+
+                    i {
+                        padding-right: 10px;
+
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    i {
+                        color: #BBAC29;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    i {
+                        color: white
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    i {
+                        color: #008315
+                    }
+                }
+            }
+        }
+    }
+
+    .dates {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-top: 35px;
+            margin-bottom: 80px;
+
+            li {
+                list-style: none;
+                padding: 5px 20px;
+
+                &:hover {
+                    background-color: #B10B18;
+                    a{
+                        color: white;
+                    }
+                }
+
+                &.active {
+                    background-color: #B10B18;
+                }
+
+                border-bottom: 1px solid #656565;
+                border-right: 1px solid #656565;
+
+                &:last-child {
+                    border-right: 0px;
+                }
+
+                a {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: 0.015em;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.movie-container {
+    background: #0E1647;
+    position: relative;
+    z-index: 3;
+
+    .container {
+        .row {
+
+
+            &.movies-lists {
+                gap: 50px;
+
+                .movie-single {
+                    margin-bottom: 70px;
+                    border: 1px solid #656565;
+                    padding-left: 0;
+                    padding-right: 0;
+                    max-width: 30%;
+
+                    .img-container {
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+
+                        .get-ticket-page {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: white;
+                            background-color: white;
+                            padding: 8px 15px 14px 20px;
+                            border-radius: 0px 0px 0px 25px;
+                            margin-left: 15px;
+                            margin-bottom: 15px;
+
+                            svg {}
+                        }
+
+                        .mv-rating {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-color: white;
+                            padding: 15px 20px;
+                            border-radius: 50px;
+                            margin-left: 15px;
+                            margin-bottom: 15px;
+
+                            p {
+                                font-family: 'Red Hat Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 20px;
+                                line-height: 26px;
+                                letter-spacing: 0.015em;
+                                color: #000000;
+                                margin-bottom: 0;
+
+                            }
+                        }
+                    }
+
+                    .this-movie-detials {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-bottom: 20px;
+
+                        h3 {
+                            font-family: $font-family;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 32px;
+                            letter-spacing: 0.015em;
+                            color: #FFFFFF;
+                            padding-top: 39px;
+                        }
+
+                        p {
+                            font-family: 'Red Hat Display';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 26px;
+                            letter-spacing: 0.015em;
+                            margin-top: 12px;
+                            color: rgba(255, 255, 255, 0.61);
+                        }
+
+                        .timings {
+                            ul {
+                                padding: 0;
+                                margin: 0;
+                                display: flex;
+                                gap: 15px;
+
+                                li {
+                                    list-style: none;
+                                    border: 1px solid #454545;
+                                    padding: 3px 20px;
+                                    max-width: fit-content;
+
+                                    &.booked {
+                                        border-color: #BBAC29;
+
+                                        a {
+                                            color: #BBAC29;
+                                        }
+                                    }
+
+                                    &.available {
+                                        border-color: #fff;
+
+                                        a {
+                                            color: #fff;
+                                        }
+                                    }
+
+                                    a {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

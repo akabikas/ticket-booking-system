@@ -1,0 +1,20 @@
+@import "var";
+@import "mixin";
+
+@import "header";
+@import "home";
+@import "footer";
+@import "login";
+@import "movie";
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #0E1647;
+    min-height: 100vh;
+}

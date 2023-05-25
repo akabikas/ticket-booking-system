@@ -1,0 +1,152 @@
+.login-page, .register-page {
+    padding-top: 100px;
+    padding-bottom: 300px;
+
+    .background-container {
+        position: relative;
+        max-height: 80vh;
+
+        img {
+            height: auto !important;
+            margin-top: -500px;
+            height: auto !important;
+        }
+    }
+
+    .login-form, .register-form {
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            font-family: 'Red Hat Display';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 46px;
+            line-height: 61px;
+            letter-spacing: 0.015em;
+            color: #FFFFFF;
+            margin-bottom: 55px;
+        }
+
+        fieldset {
+            &.remember {
+                margin-bottom: 50px;
+                display: flex;
+                align-items: center;
+
+                input {
+                    padding: 0;
+                    margin: 0;
+                    width: auto;
+                    margin-right: 10px;
+                    border: 1px solid white;
+                    /* Hide the default radio button */
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    outline: none;
+                    border: none;
+
+                    /* Create a square shape */
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid white;
+                    background: none;
+                    border-radius: 0;
+                    position: relative;
+                    &:checked::before {
+                        content: '';
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        background-color: rgba(177, 11, 24, 0.69);
+                        outline: none;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        /* Adjust the margin as needed */
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+input {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.015em;
+    color: #8F8F8F;
+    padding: 20px 24px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    width: 100%;
+    margin-bottom: 40px;
+
+    &::placeholder {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.015em;
+        color: #8F8F8F;
+
+    }
+}
+
+button {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.015em;
+    color: #FFFFFF;
+    padding: 20px 70px;
+    outline: 0;
+    border: 0;
+    background: rgba(177, 11, 24, 0.69);
+    margin-bottom: 40px;
+}
+
+label {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.015em;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.015em;
+    color: #FFFFFF;
+
+    a {
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.015em;
+
+        color: #FFFFFF;
+        &:hover{
+            color: rgba(177, 11, 24, 0.69);
+        }
+    }
+}

@@ -1,0 +1,109 @@
+footer {
+    bottom: 0;
+    background-color: #0B1136;
+    position: relative;
+    .main-footer {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        .container {
+            .row {
+                .logo {
+                    img {}
+                }
+
+                h4 {
+                    font-family: 'Red Hat Display';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: 0.015em;
+                    margin-bottom: 15px;
+                    color: #FFFFFF;
+                }
+
+                .payment-partner {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+                            list-style: none;
+                            margin-bottom: 10px;
+                            margin-right: 10px;
+                            padding-left: 0;
+                            padding-right: 0;
+
+                            &:last-of-type {
+                                flex-basis: 100%;
+                            }
+
+                            img {}
+                        }
+                    }
+                }
+
+                .quick-links {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            list-style: none;
+                            margin-bottom: 10px;
+
+                            a {
+                                font-family: 'Red Hat Display';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 26px;
+                                letter-spacing: 0.015em;
+                                text-decoration: none;
+                                color: rgba(255, 255, 255, 0.67);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 1px solid #656565;
+    .container {
+        .row {
+            p {
+                font-family: 'Red Hat Display';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0.015em;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+
+            .copyright-year {
+                p {}
+
+            }
+
+            .creator {
+                p {
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
