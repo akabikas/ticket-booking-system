@@ -3,78 +3,78 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useQuery, gql } from '@apollo/client';
 
-const MOVIE_QUERY = gql`
-query GetMovies {
-    movies {
-      data {
-        id
-        attributes {
-          Title
-          Runtime
-          Director
-          Description
-          Casts
-          Poster{
-            data{
-              attributes{
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// const MOVIE_QUERY = gql`
+// query GetMovies {
+//     movies {
+//       data {
+//         id
+//         attributes {
+//           Title
+//           Runtime
+//           Director
+//           Description
+//           Casts
+//           Poster{
+//             data{
+//               attributes{
+//                 url
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
-const SHOWS_QUERY = gql`
-  query GetShows {
-    shows {
-      data {
-        id
-        attributes {
-          time
-          date
-          movie_id {
-            data {
-              id
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// const SHOWS_QUERY = gql`
+//   query GetShows {
+//     shows {
+//       data {
+//         id
+//         attributes {
+//           time
+//           date
+//           movie_id {
+//             data {
+//               id
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 function MovieCard() {
-    const { loading: movieLoading, error: movieError, data: movieData } = useQuery(MOVIE_QUERY);
-    const { loading: showsLoading, error: showsError, data: showsData } = useQuery(SHOWS_QUERY);
+    // const { loading: movieLoading, error: movieError, data: movieData } = useQuery(MOVIE_QUERY);
+    // const { loading: showsLoading, error: showsError, data: showsData } = useQuery(SHOWS_QUERY);
 
-    if (movieLoading || showsLoading) {
-        return <div>Loading...</div>;
-    }
-    if (movieError || showsError) {
-        console.error(movieError || showsError);
-        return <div>Error occurred while fetching data</div>;
-    }
+    // if (movieLoading || showsLoading) {
+    //     return <div>Loading...</div>;
+    // }
+    // if (movieError || showsError) {
+    //     console.error(movieError || showsError);
+    //     return <div>Error occurred while fetching data</div>;
+    // }
 
-    const movies = movieData.movies.data;
-    const shows = showsData.shows.data;
+    // const movies = movieData.movies.data;
+    // const shows = showsData.shows.data;
 
-    const formatTime = (timeString) => {
-        const time = new Date(`01/01/2023 ${timeString}`);
-        return time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    };
+    // const formatTime = (timeString) => {
+    //     const time = new Date(`01/01/2023 ${timeString}`);
+    //     return time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    // };
 
-    const getTimings = (movieId) => {
-        const movieShows = shows.filter((show) => show.attributes.movie_id.data.id === movieId);
-        return movieShows.map((show) => formatTime(show.attributes.time));
-    };
+    // const getTimings = (movieId) => {
+    //     const movieShows = shows.filter((show) => show.attributes.movie_id.data.id === movieId);
+    //     return movieShows.map((show) => formatTime(show.attributes.time));
+    // };
 
     return (
         <>
-            {movies.map((movie) => (
-                <div className="col-4 movie-single" key={movie.id}>
+            {/* {movies.map((movie) => ( */}
+                <div className="col-4 movie-single">
                     <div className="img-container">
                         <Image
                             src="/assets/img/jw.jpg"
@@ -84,7 +84,7 @@ function MovieCard() {
                             className="movie-poster"
                         />
                         <div className="get-ticket-page">
-                            <Link href={`/movie/${movie.id}`}>
+                            <Link href={`/movie/1`}>
                                 <svg
                                     width="13"
                                     height="17"
@@ -105,21 +105,21 @@ function MovieCard() {
                         </div>
                     </div>
                     <div className="this-movie-detials">
-                        <h3>{movie.attributes.Title}</h3>
-                        <p>{movie.attributes.Runtime}</p>
+                        <h3>John wick - Chapter 1</h3>
+                        <p>2 Hours 50 min</p>
                         <p className="genre">CRIME, DRAMA</p>
                         <div className="timings">
                             <ul className="row">
-                                {getTimings(movie.id).map((timing) => (
-                                    <li className="col-4 available" key={timing}>
-                                        <a>{timing}</a>
+                                
+                                    <li className="col-4 available">
+                                        <a>07:00AM</a>
                                     </li>
-                                ))}
+                                
                             </ul>
                         </div>
                     </div>
                 </div>
-            ))}
+            {/* ))} */}
         </>
     );
 }

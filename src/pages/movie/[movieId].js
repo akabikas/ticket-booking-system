@@ -36,21 +36,21 @@ function MovieSingle() {
     const router = useRouter();
     const movieId = router.query.movieId;
 
-    const { loading, error, data } = useQuery(MOVIE_QUERY, {
-        variables: { movieId },
-    });
+    // const { loading, error, data } = useQuery(MOVIE_QUERY, {
+    //     variables: { movieId },
+    // });
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-    if (error) {
-        console.error(error);
-        return <div>Error occurred while fetching data</div>;
-    }
+    // if (loading) {
+    //     return <div>Loading...</div>;
+    // }
+    // if (error) {
+    //     console.error(error);
+    //     return <div>Error occurred while fetching data</div>;
+    // }
 
-    const movie = data.movie;
+    // const movie = data.movie;
 
-    const { Title, Runtime, Director, Description, Casts } = movie.data.attributes;
+    // const { Title, Runtime, Director, Description, Casts } = movie.data.attributes;
 
     return (
 
@@ -72,21 +72,22 @@ function MovieSingle() {
                 <div className="container movie-details">
                     <div className="row justify-content-between">
                         <div className="col-5 left">
-                            <h1>{Title}</h1>
+                            <h1>Title</h1>
                             <div className="content">
-                                <p>{Description}</p>
+                                <p>Description</p>
                             </div>
                             <div className="other details">
-                                <p>Run time: {Runtime}</p>
-                                <p>Director: {Director}</p>
+                                <p>Run time: Runtime</p>
+                                <p>Director: Director</p>
                             </div>
                         </div>
                         <div className="col-4 right">
                             <h2>Casts</h2>
                             <ul>
-                                {Casts.split('\n').map((cast, index) => (
+                                {/* {Casts.split('\n').map((cast, index) => (
                                     <li key={index}>{cast}</li>
-                                ))}
+                                ))} */}
+                                <li>Cast name</li>
                             </ul>
                         </div>
                     </div>
