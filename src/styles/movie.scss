@@ -240,7 +240,7 @@
 
     }
 
-    .error-div {
+    .error-div, .success-div{
         display: flex;
         font-family: 'Red Hat Display';
         font-style: normal;
@@ -251,6 +251,9 @@
         justify-content: center;
         color: #FF0000;
         margin-bottom: 10px;
+    }
+    .success-div{
+        color: #008315;
     }
 }
 

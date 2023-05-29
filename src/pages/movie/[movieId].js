@@ -7,50 +7,11 @@ import MovieDates from '@/components/movieDates';
 import TicketForm from '@/components/ticketForm';
 import { useQuery, gql } from '@apollo/client';
 
-const MOVIE_QUERY = gql`
-    query GetMovieById($movieId: ID!) {
-        movie(id: $movieId) {
-        data {
-            id
-            attributes {
-            Title
-            Runtime
-            Director
-            Description
-            Casts
-            Poster {
-                data {
-                attributes {
-                    url
-                }
-                }
-            }
-            }
-        }
-        }
-    }
-`;
 
 
 function MovieSingle() {
     const router = useRouter();
     const movieId = router.query.movieId;
-
-    // const { loading, error, data } = useQuery(MOVIE_QUERY, {
-    //     variables: { movieId },
-    // });
-
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
-    // if (error) {
-    //     console.error(error);
-    //     return <div>Error occurred while fetching data</div>;
-    // }
-
-    // const movie = data.movie;
-
-    // const { Title, Runtime, Director, Description, Casts } = movie.data.attributes;
 
     return (
 
@@ -84,9 +45,6 @@ function MovieSingle() {
                         <div className="col-4 right">
                             <h2>Casts</h2>
                             <ul>
-                                {/* {Casts.split('\n').map((cast, index) => (
-                                    <li key={index}>{cast}</li>
-                                ))} */}
                                 <li>Cast name</li>
                             </ul>
                         </div>
