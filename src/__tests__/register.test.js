@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import RegisterUser from './register';
+import RegisterUser from '../pages/register';
 
 describe('RegisterUser', () => {
   test('renders email input correctly', () => {

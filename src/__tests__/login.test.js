@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import LoginUser from './login';
+import LoginUser from '../pages/login';
 
 describe('LoginUser', () => {
   test('renders email input correctly', () => {
